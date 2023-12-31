@@ -17,15 +17,16 @@
             <div class="bg-white rounded font-semibold flex items-center px-2 p-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-lightbulb mr-2" viewBox="0 0 16 16">
-                    <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1" />
+                    <path
+                        d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1" />
                 </svg>
                 200 Points
             </div>
         </nav>
     </section>
 
-    
-    <section class="mt-8 space-y-5">
+
+    <section class="mt-6 space-y-5">
 
         <!-- The Progress Bar -->
         <div class="flex justify-center items-center md:hidden">
@@ -34,17 +35,30 @@
             </div>
             <p class="ml-2 font-semibold text-lg">1/5</p>
         </div>
-        
-        <div class="font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
+
+        <div class="mx-4 font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
             Predict the top loser across the indices?
         </div>
     </section>
 
-    <section class="mt-6 flex flex-col items-center mx-4 space-y-6 font-bold">
-        <div class="bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option1</div>
-        <div class="bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option2</div>
-        <div class="bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option3</div>
-        <div class="bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option4</div>
+    <section class="mt-4 flex flex-col items-center mx-4 space-y-6 font-bold">
+
+        <input type="radio" id="option1" name="options" class="hidden">
+        <label for="option1"
+            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option1</label>
+
+        <input type="radio" id="option2" name="options" class="hidden">
+        <label for="option2"
+            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option2</label>
+
+        <input type="radio" id="option3" name="options" class="hidden">
+        <label for="option3"
+            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option3</label>
+
+        <input type="radio" id="option4" name="options" class="hidden">
+        <label for="option4"
+            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option4</label>
+
     </section>
 
     <footer class="flex md:bg-red-50 justify-around items-center md:space-x-4 h-24 absolute bottom-0 mt-4 w-full">
@@ -56,8 +70,12 @@
             <p class="ml-2 font-semibold text-lg">1/5</p>
         </div>
 
+        <button
+            class="bg-red-500 active:bg-red-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="deselect">deselect</button>
+
         <!-- Continue Button -->
-        <button class="bg-green-500 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white">Continue</button>
+        <button
+            class="bg-green-500 hover:bg-green-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white">Continue</button>
     </footer>
 
 </body>
