@@ -31,33 +31,33 @@
         <!-- The Progress Bar -->
         <div class="flex justify-center items-center md:hidden">
             <div class="bg-gray-300 w-4/5 rounded-xl overflow-hidden">
-                <div class="bg-green-500 w-[50%] h-4"></div>
+                <div class="bar bg-green-500 h-4"></div>
             </div>
             <p class="ml-2 font-semibold text-lg">1/5</p>
         </div>
 
-        <div class="mx-4 font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
+        <div id="qarea" class="mx-4 font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
             Predict the top loser across the indices?
         </div>
     </section>
 
-    <section class="mt-4 flex flex-col items-center mx-4 space-y-6 font-bold">
+    <section class="mt-2 flex flex-col items-center mx-4 space-y-6 font-bold">
 
         <input type="radio" id="option1" name="options" class="hidden">
         <label for="option1"
-            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option1</label>
+            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option1</label>
 
         <input type="radio" id="option2" name="options" class="hidden">
         <label for="option2"
-            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option2</label>
+            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option2</label>
 
         <input type="radio" id="option3" name="options" class="hidden">
         <label for="option3"
-            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option3</label>
+            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option3</label>
 
         <input type="radio" id="option4" name="options" class="hidden">
         <label for="option4"
-            class="options bg-red-50 hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option4</label>
+            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option4</label>
 
     </section>
 
@@ -65,17 +65,18 @@
         <!-- The Progress Bar -->
         <div class="md:flex justify-center items-center hidden">
             <div class="bg-gray-300 w-52 rounded-xl overflow-hidden">
-                <div class="bg-green-500 w-[50%] h-4"></div>
+                <div class="bar bg-green-500 h-4"></div>
             </div>
             <p class="ml-2 font-semibold text-lg">1/5</p>
         </div>
 
+        <!-- Deselect Button -->
         <button
-            class="bg-red-500 active:bg-red-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="deselect">deselect</button>
+            class="bg-red-500 md:hover:bg-red-600 active:bg-red-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="deselect">deselect</button>
 
         <!-- Continue Button -->
         <button
-            class="bg-green-500 hover:bg-green-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white">Continue</button>
+            class="bg-green-500 md:hover:bg-green-600 active:bg-green-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="continue">continue</button>
     </footer>
 
 </body>
