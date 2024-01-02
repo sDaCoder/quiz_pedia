@@ -20,25 +20,32 @@ radios.forEach(radio => {
     })
 })
 
-function deselection(elem) {
-    elem.previousElementSibling.checked = false
-    colourOpt(elem)
+function deselection(options, deselect) {
+    deselect.addEventListener('click', function () {
+        options.forEach(option => {
+            option.previousElementSibling.checked = false
+            colourOpt(option)
+        });
+    })
 }
 
-let deselect = document.getElementById("deselect")
-deselect.addEventListener('click', function () {
-    options.forEach(option => deselection(option))
-})
+deselection(options, document.getElementById("deselect"))
 
 // ? LOGIC PART
 const QuesAns = {
     "When was the first known use of the word 'quiz'": ["1781", "1771", "1871", "1881"],
     "Which built-in function can get information from the user": ["input", "get", "print", "write"],
     "Which keyword do you use to loop over a given list of elements": ["for", "while", "each", "loop"],
-    "Which is the oldest programming language of the world": ["Python", "C", "C++", "Java"],
-    "Which is not a OOP language": ["Python", "C", "C++", "JavaScript"],
+    "Which is the oldest programming language of the world": ["Java", "Python", "C", "C++"],
+    "Which is an entry controlled loop": ["while", "do-while", "for", "forEach"],
+    "Which is not a OOP language": ["C", "Python", "C++", "JavaScript"],
     "What is the name of the highest mountain peak of the world": ["Mount Everest", "Godwin Austin(K2)", "Kanchenjunga", "Mount Killimanjaro",],
 };
+
+function quesPrint(qNo)
+{
+    document.getElementById("qarea").textContent = `${qArr[qNo]}?`    
+}
 
 function optPrint(qNo, options)
 {
@@ -54,22 +61,41 @@ function controlWid(qNo, bars)
     bars.forEach(bar =>{bar.style.width = `${width}%`})
 }
 
+function labelPrint(qNo, qLabels) {
+    qLabels.forEach(qLabel => {
+        qLabel.textContent = `${qNo+1}/${qArr.length}`
+    });
+}
+
+function checkedRadio(radios) {
+    for(let i = 0; i < radios.length; i++)
+    {
+        if (radios[i].checked) {
+            return radios[i]
+        }
+    }
+}
+
 const qArr = (Object.keys(QuesAns))
 const optArr = (Object.values(QuesAns))
+const qLabels = document.querySelectorAll(".qLabel")
 
 let qNo = 0
 let bars = document.querySelectorAll(".bar")
-document.getElementById("qarea").textContent = `${qArr[0]}?`
-optPrint(0, options)
-controlWid(0, bars)
+quesPrint(qNo)
+optPrint(qNo, options)
+controlWid(qNo, bars)
+labelPrint(qNo, qLabels)
+deselection(options, document.getElementById("continue"))
 
-document.getElementById("continue").addEventListener('click', function () {
+document.getElementById("continue").addEventListener('click', () => {
 
     qNo++
-    document.getElementById("qarea").textContent = `${qArr[qNo]}?`
+    quesPrint(qNo)
     optPrint(qNo, options)
     controlWid(qNo, bars)
-
-
+    labelPrint(qNo, qLabels)
+    deselection(options, document.getElementById("continue"))
+    
 })
 

@@ -31,9 +31,9 @@
         <!-- The Progress Bar -->
         <div class="flex justify-center items-center md:hidden">
             <div class="bg-gray-300 w-4/5 rounded-xl overflow-hidden">
-                <div class="bar bg-green-500 h-4"></div>
+                <div class="bar bg-green-500 h-4 transition-all ease-in-out"></div>
             </div>
-            <p class="ml-2 font-semibold text-lg">1/5</p>
+            <p class="qLabel ml-2 font-semibold text-lg">1/5</p>
         </div>
 
         <div id="qarea" class="mx-4 font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
@@ -61,13 +61,13 @@
 
     </section>
 
-    <footer class="flex md:bg-red-50 justify-around items-center md:space-x-4 h-24 absolute bottom-0 mt-4 w-full">
+    <footer class="flex md:bg-red-50 justify-around items-center md:space-x-4 mx-1 h-24 md:absolute bottom-0 mt-4 w-full">
         <!-- The Progress Bar -->
         <div class="md:flex justify-center items-center hidden">
             <div class="bg-gray-300 w-52 rounded-xl overflow-hidden">
-                <div class="bar bg-green-500 h-4"></div>
+                <div class="bar bg-green-500 h-4 transition-all ease-in-out"></div>
             </div>
-            <p class="ml-2 font-semibold text-lg">1/5</p>
+            <p class="qLabel ml-2 font-semibold text-lg">1/5</p>
         </div>
 
         <!-- Deselect Button -->
@@ -76,7 +76,7 @@
 
         <!-- Continue Button -->
         <button
-            class="bg-green-500 md:hover:bg-green-600 active:bg-green-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="continue">continue</button>
+            class="bg-green-500 md:hover:bg-green-600 active:bg-green-600 disabled:bg-gray-500 disabled:cursor-not-allowed disabled:hover:bg-gray-500 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="continue">continue</button>
     </footer>
 
 </body>
