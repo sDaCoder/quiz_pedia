@@ -4,12 +4,14 @@ let radios = document.querySelectorAll('input[type="radio"]')
 
 function colourOpt(option) {
     if (option.previousElementSibling.checked == true) {
-        option.style.background = 'rgb(34 197 94)'
+        option.parentElement.style.backgroundColor = 'rgb(34 197 94)'
         option.style.color = 'white'
+        option.previousElementSibling.previousElementSibling.style.backgroundColor = 'rgb(254, 242, 242)'
     }
     else {
-        option.style.background = ''; // Reset the background color if the radio button is not checked
+        option.parentElement.style.backgroundColor = ''; // Reset the background color if the radio button is not checked
         option.style.color = ''
+        option.previousElementSibling.previousElementSibling.style.backgroundColor = ''
     }
 
 }
@@ -50,7 +52,7 @@ function quesPrint(qNo) {
 function optPrint(qNo, options) {
     options.forEach((option, i) => {
         // let optNum = String.fromCharCode(65 + i)
-        option.textContent = `  ${optArr[qNo][i]}`
+        option.textContent = `  ${(optArr[qNo])[i]}`
     })
 }
 
@@ -83,15 +85,16 @@ function UIload(qNo) {
 
 const qArr = (Object.keys(QuesAns))
 const optArr = (Object.values(QuesAns))
+let CorrectAnswers = []
+optArr.forEach((opt, i) => {CorrectAnswers[i] = opt[0]});
+
 const qLabels = document.querySelectorAll(".qLabel")
 
 let qNo = 0
 let score = 0
+let checkedAnsArr = []
 let bars = document.querySelectorAll(".bar")
-quesPrint(qNo)
-optPrint(qNo, options)
-controlWid(qNo, bars)
-labelPrint(qNo, qLabels)
+UIload(qNo)
 
 document.getElementById("continue").addEventListener('click', () => {
 
@@ -99,8 +102,9 @@ document.getElementById("continue").addEventListener('click', () => {
     if (checkedRadio(radios) != null) {
 
         const checkedAns = checkedRadio(radios).nextElementSibling.textContent
+        checkedAnsArr.push(checkedAns)
 
-        if (checkedAns == `  ${optArr[qNo][0]}`) {
+        if (checkedAns == `  ${CorrectAnswers[qNo]}`) {
             score++
         }
         console.log(score)
@@ -108,24 +112,47 @@ document.getElementById("continue").addEventListener('click', () => {
         if (qNo < qArr.length) {
             UIload(qNo)
         }
-        else {
+        if (qNo == (qArr.length - 1)) {
+            document.getElementById("continue").textContent = `finish`
+            UIload(qNo)
+        }
+        if (qNo == qArr.length) {
             let resultStr = `You scored ${score * 100} out of ${qArr.length * 100}`
             alert(resultStr)
             location.reload()
+            // location.href = "result.html"
         }
     }
     else {
+        checkedAnsArr.push(null)
         console.log(score)
         qNo++
         if (qNo < qArr.length) {
             UIload(qNo)
         }
-        else {
+        if (qNo == (qArr.length - 1)) {
+            document.getElementById("continue").textContent = `finish`
+            UIload(qNo)
+        }
+        if (qNo == qArr.length) {
             let resultStr = `You scored ${score * 100} out of ${qArr.length * 100}`
             alert(resultStr)
             location.reload()
+            // location.href = "result.html"
         }
     }
 
 })
 
+// ! Designing the result page
+let unanswered = 0
+for (let i = 0; i < checkedAnsArr.length; i++) {
+    if(checkedAnsArr[i] == null)
+    {
+        unanswered++
+    }
+}
+const correct = score   
+const incorrect = (checkedAnsArr.length) - (correct + incorrect)
+document.getElementById("incorrectBar").style.width = `${(incorrect/checkedAnsArr.length)*100}%`
+document.getElementById("unansweredBar").style.width = `${(unanswered/checkedAnsArr.length)*100}%`

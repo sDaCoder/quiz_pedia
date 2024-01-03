@@ -12,9 +12,9 @@
 
     <section>
         <nav class="flex justify-around items-center bg-red-50 max-h-40 h-16 w-full flex-wrap">
-            <div class="font-bold text-2xl hidden md:block">quizPedia</div>
-            <div class="font-semibold text-xl text-center">Sports Quiz#123</div>
-            <div class="bg-white rounded font-semibold flex items-center px-2 p-1">
+            <div class="font-bold text-2xl">quizPedia</div>
+            <div class="font-semibold text-xl text-center">General Knowledge#123</div>
+            <div class="bg-white rounded font-semibold items-center px-2 p-1 hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-lightbulb mr-2" viewBox="0 0 16 16">
                     <path
@@ -41,23 +41,31 @@
         </div>
     </section>
 
-    <section class="mt-2 flex flex-col items-center mx-4 space-y-6 font-bold">
+    <section class="mt-5 flex flex-col items-center mx-4 space-y-6 font-extrabold">
 
-        <input type="radio" id="option1" name="options" class="hidden">
-        <label for="option1"
-            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option1</label>
-
-        <input type="radio" id="option2" name="options" class="hidden">
-        <label for="option2"
-            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option2</label>
-
-        <input type="radio" id="option3" name="options" class="hidden">
-        <label for="option3"
-            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option3</label>
-
-        <input type="radio" id="option4" name="options" class="hidden">
-        <label for="option4"
-            class="options bg-red-50 md:hover:bg-green-200 cursor-pointer md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">Option4</label>
+        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+            <p class="py-2 px-4 bg-red-100 rounded-full">A</p>
+            <input type="radio" id="option1" name="options" class="hidden">
+            <label for="option1" class="options px-6 cursor-pointer">Option1</label>
+        </div>
+        
+        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+            <p class="py-2 px-4 bg-red-100 rounded-full">B</p>
+            <input type="radio" id="option2" name="options" class="hidden">
+            <label for="option2" class="options px-6 cursor-pointer">Option2</label>
+        </div>
+        
+        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+            <p class="py-2 px-4 bg-red-100 rounded-full">C</p>
+            <input type="radio" id="option3" name="options" class="hidden">
+            <label for="option3" class="options px-6 cursor-pointer">Option3</label>
+        </div>
+        
+        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+            <p class="py-2 px-4 bg-red-100 rounded-full">D</p>
+            <input type="radio" id="option4" name="options" class="hidden">
+            <label for="option4" class="options px-6 cursor-pointer">Option4</label>
+        </div>
 
     </section>
 

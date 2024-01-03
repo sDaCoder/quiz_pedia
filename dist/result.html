@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-red-100">
+
+    <section class="select-none">
+        <nav class="flex justify-around items-center bg-red-50 max-h-40 h-16 w-full flex-wrap">
+            <div class="font-bold text-2xl">quizPedia</div>
+            <div class="font-semibold text-xl text-center">General Knowledge#123</div>
+            <div class="bg-white rounded font-semibold items-center px-2 p-1 hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-lightbulb mr-2" viewBox="0 0 16 16">
+                    <path
+                        d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1" />
+                </svg>
+                200 Points
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <h1 class="uppercase text-center text-2xl font-bold p-5">result</h1>
+
+        <div class="flex md:flex-row flex-col-reverse justify-around items-center py-4">
+            
+            <div class="flex justify-between items-center">
+                <div class="bg-red-900 h-4 w-[20vw] rounded-lg overflow-hidden flex">
+                    <div id="incorrectBar" class="bg-red-400 h-4 w-[25%]"></div>
+                    <div id="unansweredBar" class="bg-red-700 h-4 w-[50%]"></div>
+                </div>
+                <p class="px-2">4/5</p>
+            </div>
+            
+            <p class="text-2xl text-green-600 font-semibold">You scored 400 out of 500</p>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
