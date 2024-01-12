@@ -25,66 +25,155 @@
         </nav>
     </section>
 
+    <section id="quiz" class="">
 
-    <section class="mt-6 space-y-5">
 
-        <!-- The Progress Bar -->
-        <div class="flex justify-center items-center md:hidden">
-            <div class="bg-gray-300 w-4/5 rounded-xl overflow-hidden">
-                <div class="bar bg-green-500 h-4 transition-all ease-in-out"></div>
+        <section class="mt-6 space-y-5">
+
+            <!-- The Progress Bar -->
+            <div class="flex justify-center items-center md:hidden">
+                <div class="bg-gray-300 w-4/5 rounded-xl overflow-hidden">
+                    <div class="bar bg-green-500 h-4 transition-all ease-in-out"></div>
+                </div>
+                <p class="qLabel ml-2 font-semibold text-lg">1/5</p>
             </div>
-            <p class="qLabel ml-2 font-semibold text-lg">1/5</p>
-        </div>
 
-        <div id="qarea" class="mx-4 font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
-            Predict the top loser across the indices?
+            <div id="qarea"
+                class="mx-4 font-bold uppercase text-center md:text-2xl text-xl text-blue-900 flex items-center justify-center">
+                Predict the top loser across the indices?
+            </div>
+        </section>
+
+        <section class="mt-5 flex flex-col items-center mx-4 space-y-6 font-extrabold">
+
+            <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+                <p class="py-2 px-4 bg-red-100 rounded-full">A</p>
+                <input type="radio" id="option1" name="options" class="hidden">
+                <label for="option1" class="options px-6 cursor-pointer">Option1</label>
+            </div>
+
+            <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+                <p class="py-2 px-4 bg-red-100 rounded-full">B</p>
+                <input type="radio" id="option2" name="options" class="hidden">
+                <label for="option2" class="options px-6 cursor-pointer">Option2</label>
+            </div>
+
+            <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+                <p class="py-2 px-4 bg-red-100 rounded-full">C</p>
+                <input type="radio" id="option3" name="options" class="hidden">
+                <label for="option3" class="options px-6 cursor-pointer">Option3</label>
+            </div>
+
+            <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
+                <p class="py-2 px-4 bg-red-100 rounded-full">D</p>
+                <input type="radio" id="option4" name="options" class="hidden">
+                <label for="option4" class="options px-6 cursor-pointer">Option4</label>
+            </div>
+
+        </section>
+    </section>
+
+    <section id="result" class="hidden">
+        <div class="border-slate-400 bg-red-50 border-[1px] m-8 p-8 space-y-6 text-center rounded-t-md">
+            <p class="md:text-3xl text-lg uppercase font-extrabold text-wrap">Congratulations!!</p>
+            <p class="text-green-500 text-xl" id="scoreStr">You scored 400 out of 500</p>
+        </div>
+        
+        <p class="md:text-3xl text-lg p-3 uppercase font-extrabold text-wrap text-center">summary</p>
+        <div class="border-2 mx-8 bg-red-50">
+
+            <details class="border-slate-400 border-[1px] font-semibold" open>
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-red-500 font-bold">You answered 1771 &#10060;</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+            <details class="border-slate-400 border-[1px] font-semibold">
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-yellow-500 font-bold">You didn't Answer</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+            <details class="border-slate-400 border-[1px] font-semibold">
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-green-500 font-bold">You are Correct &check;</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+ 
+            <details class="border-slate-400 border-[1px] font-semibold">
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-green-500 font-bold">You are Correct &check;</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+ 
+            <details class="border-slate-400 border-[1px] font-semibold">
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-green-500 font-bold">You are Correct &check;</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+ 
+            <details class="border-slate-400 border-[1px] font-semibold">
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-green-500 font-bold">You are Correct &check;</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+ 
+            <details class="border-slate-400 border-[1px] font-semibold">
+                <summary class="border-2 p-6 text-xl">When was the first known use of the word 'quiz'?</summary>
+                <ul class="border-slate-400 border-t-[1px] p-8 space-y-6 text-lg">
+                    <li class="text-green-500 font-bold">You are Correct &check;</li>
+                    <li class="text-green-500">Correct Answer: 1781</li>
+                    <li>Score: 0</li>
+                </ul>
+            </details>
+ 
+            
+ 
         </div>
     </section>
 
-    <section class="mt-5 flex flex-col items-center mx-4 space-y-6 font-extrabold">
 
-        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
-            <p class="py-2 px-4 bg-red-100 rounded-full">A</p>
-            <input type="radio" id="option1" name="options" class="hidden">
-            <label for="option1" class="options px-6 cursor-pointer">Option1</label>
-        </div>
-        
-        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
-            <p class="py-2 px-4 bg-red-100 rounded-full">B</p>
-            <input type="radio" id="option2" name="options" class="hidden">
-            <label for="option2" class="options px-6 cursor-pointer">Option2</label>
-        </div>
-        
-        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
-            <p class="py-2 px-4 bg-red-100 rounded-full">C</p>
-            <input type="radio" id="option3" name="options" class="hidden">
-            <label for="option3" class="options px-6 cursor-pointer">Option3</label>
-        </div>
-        
-        <div class="bg-red-50 md:hover:bg-green-200 md:w-[40%] w-full h-14 rounded-lg flex items-center px-6">
-            <p class="py-2 px-4 bg-red-100 rounded-full">D</p>
-            <input type="radio" id="option4" name="options" class="hidden">
-            <label for="option4" class="options px-6 cursor-pointer">Option4</label>
-        </div>
-
-    </section>
-
-    <footer class="flex md:bg-red-50 justify-around items-center md:space-x-4 mx-1 h-24 md:absolute bottom-0 mt-4 w-full">
+    <footer class="flex md:bg-red-50 justify-around items-center md:space-x-4 mx-1 h-24  mt-4 w-full">
         <!-- The Progress Bar -->
         <div class="md:flex justify-center items-center hidden">
-            <div class="bg-gray-300 w-52 rounded-xl overflow-hidden">
+            <div class="bg-gray-300 w-52 rounded-xl overflow-hidden flex">
                 <div class="bar bg-green-500 h-4 transition-all ease-in-out"></div>
+                <!-- <div id="unansweredBar" class="bg-red-500 h-4 w-[50%]"></div> -->
             </div>
             <p class="qLabel ml-2 font-semibold text-lg">1/5</p>
         </div>
 
         <!-- Deselect Button -->
         <button
-            class="bg-red-500 md:hover:bg-red-600 active:bg-red-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="deselect">deselect</button>
+            class="bg-red-500 md:hover:bg-red-600 active:bg-red-600 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white"
+            id="deselect">deselect</button>
 
         <!-- Continue Button -->
         <button
-            class="bg-green-500 md:hover:bg-green-600 active:bg-green-600 disabled:bg-gray-500 disabled:cursor-not-allowed disabled:hover:bg-gray-500 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white" id="continue">continue</button>
+            class="bg-green-500 md:hover:bg-green-600 active:bg-green-600 disabled:bg-gray-500 disabled:cursor-not-allowed disabled:hover:bg-gray-500 mx-6 px-10 py-[10px] md:w-[20%] w-full rounded font-semibold uppercase text-white"
+            id="continue">continue</button>
     </footer>
 
 </body>
